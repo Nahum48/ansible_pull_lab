@@ -1,5 +1,4 @@
 - hosts: locahost
-  connection: local
   become: true
  
   pre_tasks:
