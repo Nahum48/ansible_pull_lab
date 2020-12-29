@@ -9,8 +9,8 @@
 
     - name: Upgrade all packages
       become: true
-      apt: 
-	upgrade: dist
+      apt:
+        upgrade: dist
   tasks:
     - include: tasks/users.yml
     - include: tasks/cron.yml
