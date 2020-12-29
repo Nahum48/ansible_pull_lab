@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: 192.168.1.17
   become: true
  
   pre_tasks:
@@ -6,6 +6,12 @@
       apt:
         update_cache: yes
       changed_when: False
+
+    - name: Upgrade all packages
+      become: true
+      apt: 
+	upgrade=dist
+        force_apt_get=yes
 
   tasks:
     - include: tasks/users.yml
