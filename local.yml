@@ -10,9 +10,7 @@
     - name: Upgrade all packages
       become: true
       apt: 
-	upgrade=dist
-        force_apt_get=yes
-
+	upgrade: dist
   tasks:
     - include: tasks/users.yml
     - include: tasks/cron.yml
